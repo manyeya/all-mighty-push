@@ -1,1 +1,2 @@
-export { default as Component } from "./Component.svelte";
+import './Components/Radio/indexRadio/index';
+import './colors'

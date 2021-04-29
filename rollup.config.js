@@ -4,6 +4,7 @@ import sveltePreprocess from "svelte-preprocess";
 import typescript from "@rollup/plugin-typescript";
 import execute from "rollup-plugin-execute";
 import pkg from "./package.json";
+import css from "rollup-plugin-import-css";
 
 const name = pkg.name
   .replace(/^(@\S+\/)?(svelte-)?(\S+)/, "$3")
@@ -39,6 +40,7 @@ export default [
       }),
       resolve(),
       typescript(),
+      css({ minify: true, })
     ],
   },
 ];
